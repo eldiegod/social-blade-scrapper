@@ -6,7 +6,7 @@ var formidable = require('formidable');
 var scrapper = require('./scrapper')
 
 var html = "";
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 
 var server = http.createServer(function(req, res) {
 	if(req.method !== 'POST') return res.end(html);
