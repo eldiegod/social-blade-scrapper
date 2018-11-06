@@ -3,13 +3,10 @@
 var http = require('http');
 var XLSX = require('xlsx');
 var formidable = require('formidable');
-
 var scrapper = require('./scrapper')
 
 var html = "";
 var PORT = 3000;
-
-var extmap = {};
 
 var server = http.createServer(function(req, res) {
 	if(req.method !== 'POST') return res.end(html);
