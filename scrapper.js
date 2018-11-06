@@ -212,7 +212,7 @@ module.exports = async (path) => {
 
   twitterData.forEach(data => {
     data.querySelectors.forEach( selector => {
-      console.log(data)
+      // console.log(data)
       const rowIndex = data.rowIndex + 1
       workbook.Sheets.SLO[XLSX.utils.encode_cell({r: rowIndex , c: selector.colIndex})] = { v: selector.content}
     })
